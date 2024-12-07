@@ -163,7 +163,7 @@ mixin _$BorderSideDto on Dto<BorderSide> {
       color: _$this.color?.resolve(mix) ?? defaultValue.color,
       strokeAlign: _$this.strokeAlign ?? defaultValue.strokeAlign,
       style: _$this.style ?? defaultValue.style,
-      width: _$this.width ?? defaultValue.width,
+      width: mix.tokens.spaceTokenRef(_$this.width ?? defaultValue.width),
     );
   }
 
